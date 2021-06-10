@@ -21,8 +21,8 @@
 					<ul>
 						<li><a href="index.html">Home</a></li>
 						<li><a href="gtd.html" class="active">Graffiti Tower Defense</a></li>
-						<li><a href="elements.html">Nine Lives</a></li>
-						<li><a href="gtd.html">The Knave</a></li>
+						<li><a href="nineLives.html">Nine Lives</a></li>
+						<li><a href="knave.html">The Knave</a></li>
 					</ul>
 				</nav>
 			</header>
@@ -34,9 +34,140 @@
 					<section id="main" class="wrapper">
 						<div class="inner">
 							<h1 class="major">Graffiti Tower Defense</h1>
-							<span class="image fit"><img src="images/pic04.jpg" alt="" /></span>
-							<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fergiat. Pellentesque in mi eu massa lacinia malesuada et a elit. Donec urna ex, lacinia in purus ac, pretium pulvinar mauris. Curabitur sapien risus, commodo eget turpis at, elementum convallis elit. Pellentesque enim turpis, hendrerit tristique.</p>
-							<p>Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fersapien risus, commodo eget turpis at, elementum convallis elit. Pellentesque enim turpis, hendrerit tristique lorem ipsum dolor.</p>
+							<!--<span class="image fit"><img src="images/pic04.jpg" alt="" /></span>-->
+
+							<div class="gtdMenu">
+								<img src="images/GTD_menu.png" alt="" />
+							</div>
+
+							<br />
+
+							<div class="row">
+								<div class="col-6 col-12-medium">
+									<!-- Production Details -->
+									<h2>Production Details:</h2>
+									<ul>
+										<li><b>Game Engine:</b> Custom C++ Engine</li>
+										<li><b>Team Size:</b> 5 developers</li>
+										<li><b>Timeline:</b> Febuary 2021 - May 2021</li>
+										<li><b>Platform:</b> Windows 10</li>
+									</ul>
+								</div>
+								<div class="col-6 col-12-medium">
+									<!-- Tools -->
+									<h2>Tools:</h2>
+									<ul>
+										<li><b>Compiler:</b> Microsoft Visual Studio 2019</li>
+										<li><b>Version Control:</b> Tortoise Git</li>
+										<li><b>Modeling/Texturing:</b> Blender & Photoshop</li>
+									</ul>
+								</div>
+							</div>
+							<p>
+								<!-- About -->
+								<h2>About:</h2>
+								Graffiti Tower Defense is a 3D tower defense game built with a custom C++ engine. Waves of enemy paint drops walk down
+								a path towards your wall of art that you must defend! This game features over 10 different towers, 3 enemy types,
+								and 5 levels. This game was made as a final project for Full Sail University.
+							</p>
+
+							<!-- Gameplay -->
+							<h2>Gameplay:</h2>
+
+							<div class="gtd">
+								<video width="1250" height="678" controls autoplay>
+									<source src="videos/GTD_Gameplay.mp4" type="video/mp4" />
+								</video>
+							</div>
+
+							<p>
+								<!-- Tools -->
+								<h2>Personal Contributions:</h2>
+								<ul class="alt">
+									<li></li>
+									<li></li>
+								</ul>
+							</p>
+
+							<section>
+								<p>
+									<h3>Text implementation with DirectWrite</h3>
+									<span class="image right"><img src="images/GTD_text.png" alt="" /></span>
+									For rendering text on the screen, I decided to utilize DirectWrite, a text layout rendering API by Microsoft.
+									To draw the text onto the raster target, I used Direct2D and drew on the same backbuffer as the 3D rendered objects.
+									I created a Text class that allows the changing of the font, font size, text color, and text style at runtime.
+									The picture to the right showcases the HUD, which is something I created with use of my text class and it showcases
+									text being rendering which updates during the game. One of the most important features of this text API is that the
+									font size can be changed to any size at compile/runtime.
+									<br /><br />
+
+									<b>Highlights:</b>
+									<br />
+									<ul>
+										<li>Customizable font, color, and text style</li>
+										<li>Renders text onto same backbuffer as 3D rendered objects</li>
+										<li>Vector graphics API allows any font size at compile/runtime</li>
+									</ul>
+								</p>
+
+								<br />
+
+								<p>
+									<h3>GameObject system</h3>
+									<span class="image left"><img src="images/GameObjectSystem.png" alt="" /></span>
+									Each object in the game is a "GameObject" with multiple components. I built this system,
+									which follows Unity's GameObject system closely, to control how objects are rendered and how
+									the general game loop is ran. Each object can have multiple components
+									such as Animator, MeshRenderer, Collider, Material, and Lights. When GameObjects get deleted,
+									they delete all dynamic memory they have and get removed from a GameObject hierarchy. I personally
+									created many of the components like the Animator, MeshRenderer, PointLight, DirectionalLight, and Material.
+								</p>
+
+								<br /><br /><br /><br /><br /><br /><br />
+
+								<p>
+									<h3>3D meshes, textures, animations, and sprites</h3>
+
+									<div class="image right">
+										<video width="300" height="300" muted autoplay loop preload="auto">
+											<source src="videos/GTD_meshClip.mp4" type="video/mp4" />
+										</video>
+									</div>
+
+									I created nearly all the 3D meshes, textures, animations, and sprites for the game
+									using Blender and Photoshop. Although the project was made to learn game development,
+									assets were needed to make the game visually complete. Therefore, along with programming
+									the C++ engine and designing the game, I also modeled and drew assets for the game.
+									I have a history of making art, so creating the assets was something I happily accepted
+									as a job. As well as creating the animations, I also skinned the 3D models in a pixel shader.
+
+									<br /><br />
+								</p>
+
+								<br /><br /><br />
+
+								<p>
+									<h3>Lighting</h3>
+
+									<div class="image left">
+										<video width="300" height="300" muted autoplay loop preload="auto">
+											<source src="videos/GTD_lighting.mp4" type="video/mp4" />
+										</video>
+									</div>
+
+									Graffiti Tower Defense utilizes two different lights: Point and Directional. I created
+									both of these lights as components to our GameObjects. If a developer wanted to add
+									a point or directional light, they would simply have to add it as a component to a
+									GameObject. Afterwards, they could adjust the color, intensity, and radius of the light.
+									In the Render loop of our game, I check each existing GameObject for lights and add their
+									data to a lighting constant buffer. In the standard pixel shader, lighting gets rendered
+									using the constant buffer.
+								</p>
+
+								<br /><br /><br /><br /><br /><br />
+
+							</section>
+
 						</div>
 					</section>
 

@@ -1,0 +1,159 @@
+<!DOCTYPE HTML>
+<!--
+	Hyperspace by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Jadon Duran | The Knave</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+				<a href="index.html" class="title">Jadon Duran | Portfolio</a>
+				<nav>
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="gtd.html">Graffiti Tower Defense</a></li>
+						<li><a href="nineLives.html">Nine Lives</a></li>
+						<li><a href="knave.html" class="active">The Knave</a></li>
+					</ul>
+				</nav>
+			</header>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<section id="main" class="wrapper">
+						<div class="inner">
+							<h1 class="major">The Knave</h1>
+							<!--<span class="image fit"><img src="images/pic04.jpg" alt="" /></span>-->
+
+							<div class="knaveMenu">
+								<img src="images/Knave_menu.png" alt=""/>
+							</div>
+
+							<br />
+
+							<div class="row">
+								<div class="col-6 col-12-medium">
+									<!-- Production Details -->
+									<h2>Production Details:</h2>
+									<ul>
+										<li><b>Game Engine:</b> Unity</li>
+										<li><b>Team Size:</b> 1 developer</li>
+										<li><b>Timeline:</b> March 2019 - May 2019</li>
+										<li><b>Platform:</b> WebGL</li>
+									</ul>
+								</div>
+								<div class="col-6 col-12-medium">
+									<!-- Tools -->
+									<h2>Tools:</h2>
+									<ul>
+										<li><b>Compiler:</b> Microsoft Visual Studio 2017</li>
+										<li><b>Sprite creation:</b> Photoshop</li>
+									</ul>
+								</div>
+							</div>
+							<p>
+								<!-- About -->
+								<h2>About:</h2>
+								The Knave is a text-based adventure game where every choice you make affects the story. The
+								game was made with Unity and a majority of the work was put into scriptable objects.
+								These scriptable objects contained the art, text, and choices for the current slide
+								in the game. There is also an inventory system in the game that keeps track of the items
+								the player has, which also affects which choices are available to the player.
+							</p>
+
+							<!-- Gameplay -->
+							<h2>Gameplay:</h2>
+
+							<div class="knaveGameplay">
+								<video width="900" height="660" controls autoplay>
+									<source src="videos/Knave_gameplay.mp4" type="video/mp4" />
+								</video>
+							</div>
+
+							<p>
+								<!-- Tools -->
+								<h2>Highlights:</h2>
+								<ul class="alt">
+									<li></li>
+									<li></li>
+								</ul>
+							</p>
+
+							<section>
+								<p>
+									<h3>Unity's scriptable objects</h3>
+									<span class="image right"><img src="images/Knave_obj.png" alt="" /></span>
+									
+									The main tech used to create the game was Unity's scriptable objects.
+									A "ScriptableObject" is essentially a data container that has only one
+									copy of its memory. These objects are great if you want to reduce memory
+									usage in your game because scriptable objects don't copy data like prefabs
+									do. For the scriptable objects used in The Knave, they contained three main
+									pieces of information: An image, text, and set of choices. The current "scene"
+									of the game would be one scriptable object, which would display its image, text,
+									and choices to the player. After making a choice, the scriptable object would
+									load the next object according to the player's choice.
+
+									<br /><br />
+
+									<b>Highlights:</b>
+									<br />
+									<ul>
+										<li>Use of ScriptableObjects which reduce memory usage when compared to prefabs</li>
+										<li>Each ScriptableObject contains an image, text, and player choices</li>
+										<li>After a player presses a number, the next ScriptableObject will be loaded</li>
+									</ul>
+								</p>
+
+								<br />
+
+								<p>
+									<h3>Inventory System</h3>
+									<span class="image left"><img src="images/Knave_powder.png" alt="" /></span>
+									The inventory system in The Knave was straightforward, it kept track of
+									which items the player had and displayed them in order on the screen. At
+									certain parts of the game, unique choices would be presented to the player
+									according to which items they had. The image to the left shows a unique
+									story path the will only occur when the player has the bag of purple powder.
+								</p>
+
+								<br /><br /><br /><br /><br /><br /><br /><br />
+
+							</section>
+
+						</div>
+					</section>
+
+			</div>
+
+		<!-- Footer -->
+			<footer id="footer" class="wrapper alt">
+				<div class="inner">
+					<ul class="menu">
+						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
