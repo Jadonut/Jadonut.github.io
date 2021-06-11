@@ -2736,6 +2736,10 @@ input, select, textarea {
 				padding-left: 0;
 			}
 
+		ul.actions.center{
+			justify-content: center;
+		}
+
 		ul.actions.stacked {
 			-moz-flex-direction: column;
 			-webkit-flex-direction: column;
@@ -4012,13 +4016,10 @@ input, select, textarea {
 	}
 
 	.knaveGIF{
-		width: 850px;
+		width: 100%;
 		display: block;
-		height: 650px;
+		height: 100%;
 		overflow: visible;
-		left: 100px;
-		top: 300px;
-		background-position: center center;
 	}
 
 	.knaveMenu{
@@ -4047,4 +4048,9 @@ input, select, textarea {
 	#knaveClass{
 		margin-top: 0.0em;
 		margin-bottom: 0.0em;
+	}
+
+	.centerText{
+		margin-left: auto;
+		margin-right: auto;
 	}
