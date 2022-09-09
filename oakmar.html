@@ -91,56 +91,57 @@
 
 							<section>
 								<p>
-									<h3>Text implementation with DirectWrite</h3>
-									<span class="image right"><img src="images/GTD/GTD_text.png" alt="" /></span>
-									For rendering text on the screen, I decided to utilize DirectWrite, a text layout rendering API by Microsoft.
-									To draw the text onto the raster target, I used Direct2D and drew on the same backbuffer as the 3D rendered objects.
-									I created a Text class that allows the changing of the font, font size, text color, and text style at runtime.
-									The picture to the right showcases the HUD, which is something I created with use of my text class and it showcases
-									text being rendering which updates during the game. One of the most important features of this text API is that the
-									font size can be changed to any size at compile/runtime.
+									<h3>Puzzle Plants</h3>
+									<span class="image right">
+										<video width="518" height="328" muted autoplay loop preload="auto">
+											<source src="videos/Oakmar_Golf.mp4" type="video/mp4" />
+										</video>
+									</span>
+									Within each level, there are "Puzzle Plants" which can be interacted with to start a minigame. These minigames range
+									from mini-golf to matching shapes. Each puzzle plant uses abstraction for its class because the player begins and ends
+									the interaction the same.
 									<br /><br />
 
 									<b>Highlights:</b>
 									<br />
 									<ul>
-										<li>Customizable font, color, and text style</li>
-										<li>Renders text onto same backbuffer as 3D rendered objects</li>
-										<li>Vector graphics API allows any font size at compile/runtime</li>
+										<li>Wide variety of minigames (minigolf, match the shapes, painting, etc.)</li>
+										<li>Abstraction in classes to reduce unnecessary implementation</li>
 									</ul>
+
+									<br />
+
 								</p>
 
 								<br />
 
 								<p>
-									<h3>GameObject system</h3>
-									<span class="image left"><img src="images/GTD/GameObjectSystem.png" alt="" /></span>
-									Each object in the game is a "GameObject" with multiple components. I built this system,
-									which follows Unity's GameObject system closely, to control how objects are rendered and how
-									the general game loop is ran. Each object can have multiple components
-									such as Animator, MeshRenderer, Collider, Material, and Lights. When GameObjects get deleted,
-									they delete all dynamic memory they have and get removed from a GameObject hierarchy. I personally
-									created many of the components like the Animator, MeshRenderer, PointLight, DirectionalLight, and Material.
+									<h3>World Space Triplanar Shaders</h3>
+									<span class="image left">
+										<video width="450" height="358" muted autoplay loop preload="auto">
+											<source src="videos/Oakmar_TriplanarShader.mp4" type="video/mp4" />
+										</video>
+									</span>
+									Nearly all the terrain in the game uses a world space triplanar shader to render its material. 
+									This shader uses the XYZ axis and object's world space position, instead of UV's, to texture the object.
+									This gives a consistent texuture size to all the terrain, regardless of how big or small its UVs are.
+									In addition, the shader seamelessly connects textures across different meshes because it uses the world
+									space position for its UV's.
 								</p>
 
 								<br /><br /><br /><br /><br /><br /><br />
 
 								<p>
-									<h3>3D meshes, textures, animations, and sprites</h3>
+									<h3>Level Select</h3>
 
 									<div class="image right">
-										<video width="300" height="300" muted autoplay loop preload="auto">
-											<source src="videos/GTD_meshClip.mp4" type="video/mp4" />
-										</video>
+										<img src="images/Oakmar/Oakmar_LevelSelect.png" alt="Oakmar Level Select image"/>
 									</div>
 
-									I created nearly all the 3D meshes, textures, animations, and sprites for the game
-									using Blender and Photoshop. As well as creating the animations, I also skinned the 3D
-									models in a pixel shader. Although the project was made to learn game development,
-									assets were needed to make the game visually complete. Therefore, along with programming
-									the C++ engine and designing the game, I also modeled and drew assets for the game.
-									I have a history of making art, so creating the assets was something I happily accepted
-									as a job.
+									Oakmar features a 3D level select where the player moves across nodes that represent the levels.
+									When standing on a level node, details for the level, like the name and collectables, are revealed.
+									After completing a level, a path to a new level is revealed and some decor appears around the
+									completed level node. Certain areas of the map are locked and can be unlocked using key items from a shop.
 
 									<br /><br />
 								</p>
@@ -148,39 +149,36 @@
 								<br /><br /><br />
 
 								<p>
-									<h3>Lighting</h3>
+									<h3>Inventory System</h3>
 
 									<div class="image left">
-										<video width="300" height="300" muted autoplay loop preload="auto">
-											<source src="videos/GTD_lighting.mp4" type="video/mp4" />
-										</video>
+										<img src="images/Oakmar/Oakmar_Inventory.png" alt="Oakmar inventory image" />
 									</div>
 
-									Graffiti Tower Defense utilizes two different lights: Point and Directional. I created
-									both of these lights as components to our GameObjects. If a developer wanted to add
-									a point or directional light, they would simply have to add it as a component to a
-									GameObject. Afterwards, they could adjust the color, intensity, and radius of the light.
-									In the Render loop of our game, I check each existing GameObject for lights and add their
-									data to a lighting constant buffer. In the standard pixel shader, lighting gets rendered
-									using the constant buffer.
+									While in the level select, the player can access their inventory which displays their gems and key items.
+									A JSON file is used to keep track of which items the players have as well as level specific data.
+									The main currency of the game, silver coins, can also be displayed in the inventory. While in the game's
+									shop, the three key items can be purchased. The gems however, must be obtained in specific levels. The key items
+									and gems unlock areas of the game such as the final boss.
+
 								</p>
 
 								<br /><br /><br /><br /><br />
 
 								<p>
-									<h3>Shop System</h3>
+									<h3>Boss Battle</h3>
 
 									<div class="image right">
-										<video width="400" height="360" muted autoplay loop preload="auto">
-											<source src="videos/GTD_shop.mp4" type="video/mp4" />
+										<video width="500" height="280" muted autoplay loop preload="auto">
+											<source src="videos/Oakmar_Boss2.mp4" type="video/mp4" />
 										</video>
 									</div>
 
-									One of the biggest components of Graffiti Tower Defense is the shop system. Killing
-									enemies will give the player money, and the only place to spend that money is the
-									shop. This makes the focus and progression of the game be unlocking new towers and
-									upgrading current towers. I created the buying/selling features of the shop, as well
-									as showing the tower radius.
+									The final level of the game (excluding bonus level) contains a boss battle against a wizard! In this battle
+									the player must avoid three waves of attacks: fireballs, crystal walls, and dash attacks. After avoiding
+									these attacks, a wall connected to chains will be lowered, which contains a few puzzle plants. Completing
+									these puzzle plants will reveal another plant that can be used to attack the wizard. The cycle repeats
+									until the player has destroyed the wizard!
 
 								</p>
 
@@ -197,7 +195,7 @@
 			<footer id="footer" class="wrapper alt">
 				<div class="inner">
 					<ul class="menu">
-						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+						<li>&copy; Jadon Duran. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
 					</ul>
 				</div>
 			</footer>

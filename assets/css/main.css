@@ -4028,9 +4028,9 @@ input, select, textarea {
 	}
 
 	.knaveGIF{
-		width: 100%;
+		width: 650px;
+		height: 496px;
 		display: block;
-		height: 100%;
 		overflow: visible;
 	}
 
@@ -4085,5 +4085,13 @@ input, select, textarea {
 		overflow: visible;
 		margin-left: auto;
 		margin-right: auto;
+	}
+
+	.oakmarGIF
+	{
+		width: 400px;
+		display: block;
+		height: 600px;
+		overflow: hidden;
 	}
 
