@@ -120,7 +120,7 @@ input, select, textarea {
 		/*color: rgba(255, 255, 255, 0.55);*/
 		color: rgba(255, 255, 255, 1.0);
 		font-family: Arial, Helvetica, sans-serif;
-		font-size: 16.5pt;
+		font-size: 13pt;
 		font-weight: normal;
 		line-height: 1.75;
 	}
@@ -3969,9 +3969,9 @@ input, select, textarea {
 /* Container */
 
 	.gtdGIF{
-		width: 600px;
+		width: 500px;
 		display: block;
-		height: 700px;
+		height: 582px;
 		overflow: hidden;
 	}
 
@@ -3992,9 +3992,9 @@ input, select, textarea {
 	}
 
 	.nineLivesGIF{
-		width: 600px;
+		width: 500px;
 		display: block;
-		height: 700px;
+		height: 582px;
 		overflow: hidden;
 	}
 
@@ -4089,9 +4089,9 @@ input, select, textarea {
 
 	.oakmarGIF
 	{
-		width: 400px;
+		width: 500px;
 		display: block;
-		height: 600px;
+		height: 638px;
 		overflow: hidden;
 	}
 
